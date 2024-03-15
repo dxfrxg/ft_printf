@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/15 17:07:19 by daxferab         ###   ########.fr       */
+/*   Created: 2024/03/14 03:57:16 by daxferab          #+#    #+#             */
+/*   Updated: 2024/03/15 16:47:24 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_printf(char const *, ...)
-{
-	return 0;
-}
-int	main(void)
-{
-	printf("Hola hola", 2);
-}
+# include <stdarg.h>
+# include "libft/libft.h"
+
+int	ft_printf(char const *, ...);
+#endif

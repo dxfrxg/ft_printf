@@ -1,17 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 03:57:16 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/14 04:01:53 by daxferab         ###   ########.fr       */
+/*   Created: 2024/02/04 19:01:31 by daxferna          #+#    #+#             */
+/*   Updated: 2024/03/09 04:23:37 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
-int	ft_printf(char const *, ...);
-#endif
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+
+/*
+int main(void)
+{
+    ft_putchar_fd('H', 1);
+    ft_putchar_fd('\n', 1);
+
+    ft_putchar_fd('E', 2);
+    ft_putchar_fd('\n', 2);
+
+    return 0;
+}
+*/

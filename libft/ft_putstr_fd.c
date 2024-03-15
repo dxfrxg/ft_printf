@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/15 17:07:19 by daxferab         ###   ########.fr       */
+/*   Created: 2024/02/08 19:12:12 by daxferna          #+#    #+#             */
+/*   Updated: 2024/03/09 23:09:29 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(char const *, ...)
+void	ft_putstr_fd(char *s, int fd)
 {
-	return 0;
+	int	i;
+
+	i = 0;
+	while (i < ft_strlen(s))
+		ft_putchar_fd(s[i++], fd);
 }
-int	main(void)
+
+/*
+int main(void)
 {
-	printf("Hola hola", 2);
+    ft_putstr_fd("Hello, World!", 1);
+    ft_putchar_fd('\n', 1);
+
+    return 0;
 }
+*/

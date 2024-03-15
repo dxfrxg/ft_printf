@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/15 17:07:19 by daxferab         ###   ########.fr       */
+/*   Created: 2024/01/13 20:46:04 by daxferna          #+#    #+#             */
+/*   Updated: 2024/03/09 23:06:20 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(char const *, ...)
+int	ft_toupper(int c)
 {
-	return 0;
+	if (c > 96 && c < 123)
+		return (c - 32);
+	else
+		return (c);
 }
-int	main(void)
+
+/*
+int	main()
 {
-	printf("Hola hola", 2);
+	char	resultado = ft_toupper('a');
+	printf("Mayúsculas: %c", resultado);
 }
+*/

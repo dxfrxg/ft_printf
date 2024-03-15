@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daxferna <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/15 17:07:19 by daxferab         ###   ########.fr       */
+/*   Created: 2024/01/10 22:35:46 by daxferna          #+#    #+#             */
+/*   Updated: 2024/03/09 23:08:58 by daxferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(char const *, ...)
+int	ft_strlen(const char *s)
 {
-	return 0;
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
-int	main(void)
+
+/*
+int main(void)
 {
-	printf("Hola hola", 2);
+    char str1[] = "Hello, World!";
+    printf("String: \"%s\"\nLength: %d\n\n", str1, ft_strlen(str1));
+
+    return 0;
 }
+*/
