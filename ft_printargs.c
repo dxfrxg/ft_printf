@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printargs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 03:57:16 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/17 06:09:21 by daxferab         ###   ########.fr       */
+/*   Created: 2024/03/17 05:52:40 by daxferab          #+#    #+#             */
+/*   Updated: 2024/03/17 06:10:07 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stdint.h>
-# include "libft/libft.h"
+void	ft_printptr(void *ptr)
+{
+	
+}
 
-int	ft_printf(char const *, ...);
-#endif
+void	ft_printdec(double num)
+{
+	
+}
+
+void	ft_printuns(unsigned int num)
+{
+	
+}
+
+void	ft_printhex(int num, char flag)
+{
+	if (flag == 'x')
+	{
+		
+	}
+	else
+	{
+		
+	}
+}
