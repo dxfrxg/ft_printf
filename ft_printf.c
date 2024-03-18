@@ -6,13 +6,15 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/17 06:02:28 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/18 02:30:48 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "ft_printargs.c"
-
+#include "ft_printhex.c"
+#include "ft_printptr.c"
+#include "ft_printuns.c"
+#include "ft_printdec.c"
 
 static void	which_flag(char	flag, va_list args)
 {
@@ -58,7 +60,7 @@ int	ft_printf(char const *str, ...)
 int	main(void)
 {
 	char	*str = "holas";
-	ft_printf("c: %c, s: %s, p: %p, d: %d, i: %i, u: %u, x: %x, X: %X", 'a', "hola", str, 23, 23, 23, 123, 123);
+	ft_printf("c: %c, s: %s, p: %p, d: %d, i: %i, u: %u, x: %x, X: %X", 'a', "hola", str, 23, 23, 23, 987556, 987556);
 	printf("\n");
-	printf("c: %c, s: %s, p: %p, d: %d, i: %i, u: %u, x: %x, X: %X", 'a', "hola", str, 23, 23, 23, 123, 123);
+	printf("c: %c, s: %s, p: %p, d: %d, i: %i, u: %u, x: %x, X: %X", 'a', "hola", str, 23, 23, 23, 987556, 987556);
 }
