@@ -6,13 +6,13 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 02:14:27 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/18 03:16:41 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:37:12 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putptr(uintptr_t num)
+static void	ft_putptr(uintptr_t num)
 {
 	if (num >= 16)
 	{

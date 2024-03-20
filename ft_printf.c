@@ -6,24 +6,20 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/18 02:57:47 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:39:47 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-# include "ft_printhex.c"
-# include "ft_printptr.c"
-# include "ft_printuns.c"
-# include "ft_printdec.c"
 
-static void	which_flag(char	flag, va_list args)
+static void	which_flag(char flag, va_list args)
 {
 	if (flag == 'c')
 		ft_putchar_fd(va_arg(args, int), 1);
 	else if (flag == 's')
 		ft_putstr_fd(va_arg(args, char *), 1);
 	else if (flag == 'p')
-		ft_printptr(va_arg(args, void *));
+		ft_printptr(va_arg(args, int));
 	else if (flag == 'd')
 		ft_printdec(va_arg(args, double));
 	else if (flag == 'i')
@@ -55,7 +51,7 @@ int	ft_printf(char const *str, ...)
 		i++;
 	}
 	va_end(args);
-	return 0;
+	return (0);
 }
 /*int	main(void)
 {

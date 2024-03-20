@@ -2,7 +2,7 @@ NAME = libftprintf.a
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-SRC_FILES = ft_printf.c
+SRC_FILES = ft_printf.c ft_printdec.c ft_printhex.c ft_printptr.c ft_printuns.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
