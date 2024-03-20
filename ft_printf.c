@@ -6,58 +6,65 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/20 02:53:58 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/20 17:30:08 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	which_flag(char flag, va_list args)
+static int	which_flag(char flag, va_list args)
 {
+	int	bytes;
+
+	bytes = 0;
 	if (flag == 'c')
-		ft_putchar_fd(va_arg(args, int), 1);
+		bytes += ft_printchar(va_arg(args, int));
 	else if (flag == 's')
-		ft_putstr_fd(va_arg(args, char *), 1);
+		bytes += ft_printstr(va_arg(args, char *));
 	else if (flag == 'p')
-		ft_printptr(va_arg(args, int));
+		bytes += ft_printptr(va_arg(args, int));
 	else if (flag == 'd')
-		ft_printdec(va_arg(args, double));
+		bytes += ft_printdec(va_arg(args, double));
 	else if (flag == 'i')
-		ft_putnbr_fd(va_arg(args, int), 1);
+		bytes += ft_printnbr(va_arg(args, int));
 	else if (flag == 'u')
-		ft_printuns(va_arg(args, unsigned int));
+		bytes += ft_printuns(va_arg(args, unsigned int));
 	else if (flag == 'x' || flag == 'X')
-		ft_printhex(va_arg(args, int), flag);
+		bytes += ft_printhex(va_arg(args, int), flag);
 	else if (flag == '%')
 		write(1, "%", 1);
+	return (bytes);
 }
 
 int	ft_printf(char const *str, ...)
 {
 	va_list	args;
 	int		i;
+	int		bytes;
 
 	i = 0;
+	bytes = 0;
 	va_start(args, str);
 	while (str[i])
 	{
 		if (str[i] == '%')
 		{
-			which_flag(str[i + 1], args);
+			bytes += which_flag(str[i + 1], args);
 			i++;
 		}
 		else
+		{
 			write(1, &str[i], 1);
+			bytes++;
+		}
 		i++;
 	}
 	va_end(args);
-	return (0);
+	return (bytes);
 }
 /*int	main(void)
 {
-	void	*str = "holas";
-
-	ft_printf("unsigned: %u", 97676);
-	printf("\n");
-	printf("unsigned: %u", 97676);
+	int bytes = ft_printf(" %c ", '0' - 256);
+	printf("%d\n", bytes);
+	printf(" %c ", '0' - 256);
 }*/

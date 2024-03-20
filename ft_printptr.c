@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 02:14:27 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/20 02:37:12 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/20 17:27:53 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ static void	ft_putptr(uintptr_t num)
 	}
 }
 
-void	ft_printptr(unsigned long long ptr)
+int	ft_printptr(unsigned long long ptr)
 {
 	write(1, "0x", 2);
 	ft_putptr(ptr);
+	return (0);
 }

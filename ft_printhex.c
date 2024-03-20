@@ -6,14 +6,17 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:53:48 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/18 03:02:12 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/20 17:30:28 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printhex(int num, char flag)
+int	ft_printhex(int num, char flag)
 {
+	int	bytes;
+
+	bytes = 0;
 	if (num >= 16)
 	{
 		ft_printhex(num / 16, flag);
@@ -30,5 +33,7 @@ void	ft_printhex(int num, char flag)
 			if (flag == 'X')
 				ft_putchar_fd((num - 10 + 'A'), 1);
 		}
+		bytes++;
 	}
+	return (bytes);
 }

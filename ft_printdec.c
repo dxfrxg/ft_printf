@@ -6,13 +6,13 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 03:16:12 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/20 12:18:25 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/20 17:28:54 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printdec_rec(double num, int prec)
+static void	ft_printdec_rec(double num, int prec)
 {
 	unsigned int	fractional_part;
 
@@ -23,7 +23,7 @@ void	ft_printdec_rec(double num, int prec)
 	ft_printdec_rec((num * 10) - fractional_part, prec - 1);
 }
 
-void	ft_printdec(double num)
+int	ft_printdec(double num)
 {
 	unsigned int	integer_part;
 
@@ -44,4 +44,5 @@ void	ft_printdec(double num)
 		write(1, ".", 1);
 		ft_printdec_rec(num - integer_part, 6);
 	}
+	return (0);
 }

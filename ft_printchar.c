@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_printchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 19:12:12 by daxferna          #+#    #+#             */
-/*   Updated: 2024/03/20 17:27:31 by daxferab         ###   ########.fr       */
+/*   Created: 2024/03/20 17:03:22 by daxferab          #+#    #+#             */
+/*   Updated: 2024/03/20 17:30:44 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_printchar(int cha)
 {
-	write(fd, s, ft_strlen(s));
+	ft_putchar_fd(cha, 1);
+	return (1);
 }
-
-/*
-int main(void)
-{
-    ft_putstr_fd("Hello, World!", 1);
-    ft_putchar_fd('\n', 1);
-
-    return 0;
-}
-*/
