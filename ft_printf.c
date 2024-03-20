@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/20 17:30:08 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/20 18:06:02 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ static int	which_flag(char flag, va_list args)
 	else if (flag == 'x' || flag == 'X')
 		bytes += ft_printhex(va_arg(args, int), flag);
 	else if (flag == '%')
+	{
 		write(1, "%", 1);
+		bytes++;
+	}
 	return (bytes);
 }
 
@@ -64,7 +67,7 @@ int	ft_printf(char const *str, ...)
 }
 /*int	main(void)
 {
-	int bytes = ft_printf(" %c ", '0' - 256);
-	printf("%d\n", bytes);
-	printf(" %c ", '0' - 256);
+	ft_printf("NULL %s NULL", NULL);
+	printf("\n");
+	printf("NULL %s NULL", NULL);
 }*/
