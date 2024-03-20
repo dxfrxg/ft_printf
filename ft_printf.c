@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/20 02:39:47 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:53:58 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	ft_printf(char const *str, ...)
 {
 	void	*str = "holas";
 
-	ft_printf("ptr: %p", str);
+	ft_printf("unsigned: %u", 97676);
 	printf("\n");
-	printf("ptr: %p", str);
+	printf("unsigned: %u", 97676);
 }*/
