@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/20 18:06:02 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/21 02:26:44 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,32 +42,30 @@ static int	which_flag(char flag, va_list args)
 int	ft_printf(char const *str, ...)
 {
 	va_list	args;
-	int		i;
 	int		bytes;
 
-	i = 0;
 	bytes = 0;
 	va_start(args, str);
-	while (str[i])
+	while (*str)
 	{
-		if (str[i] == '%')
+		if (*str == '%')
 		{
-			bytes += which_flag(str[i + 1], args);
-			i++;
+			str++;
+			bytes += which_flag((char)*str, args);
 		}
 		else
 		{
-			write(1, &str[i], 1);
+			write(1, str, 1);
 			bytes++;
 		}
-		i++;
+		str++;
 	}
 	va_end(args);
 	return (bytes);
 }
-/*int	main(void)
+int	main(void)
 {
-	ft_printf("NULL %s NULL", NULL);
+	ft_printf("Hexa: %x, %X");
 	printf("\n");
-	printf("NULL %s NULL", NULL);
-}*/
+	printf("Hexa: %x, %X");
+}
