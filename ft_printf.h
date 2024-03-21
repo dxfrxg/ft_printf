@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:16 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/21 17:38:03 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:52:29 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int	ft_printf(char const *str, ...);
 int	ft_printchar(int c);
 int	ft_printnbr(int num);
-int	ft_printstr(char *cha);
+int	ft_printstr(char *c);
 int	ft_printptr(unsigned long long ptr);
 int	ft_printdec(double num);
 int	ft_printhex(int num, char flag);

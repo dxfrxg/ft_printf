@@ -6,14 +6,13 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:07:28 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/20 17:31:23 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/21 18:17:27 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printstr(char *cha)
+int	ft_printstr(char *c)
 {
-	ft_putstr_fd(cha, 1);
-	return (ft_strlen(cha));
+	return(write(1, c, ft_strlen(c)));
 }
