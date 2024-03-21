@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/21 02:26:44 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:39:05 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,10 @@ int	ft_printf(char const *str, ...)
 	va_end(args);
 	return (bytes);
 }
-int	main(void)
+
+/*int	main(void)
 {
-	ft_printf("Hexa: %x, %X");
+	ft_printf(" %d ", 0);
 	printf("\n");
-	printf("Hexa: %x, %X");
-}
+	printf("%f, %f, %f", 0.00, 23.5, 32.68987654654);
+}*/

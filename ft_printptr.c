@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 02:14:27 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/20 17:59:02 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/21 02:30:57 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ static int	ft_putptr(uintptr_t num, int *bytes)
 
 int	ft_printptr(unsigned long long ptr)
 {
-	int bytes;
-	write(1, "0x", 2);
+	int	bytes;
 
-	bytes = 0;
+	write(1, "0x", 2);
+	bytes = 2;
 	ft_putptr(ptr, &bytes);
 	return (bytes);
 }

@@ -6,13 +6,13 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:53:48 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/21 02:24:35 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/21 02:29:28 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printhex(long int num, char flag)
+int	ft_printhex(int num, char flag)
 {
 	int	bytes;
 
