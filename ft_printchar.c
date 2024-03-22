@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:03:22 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/21 17:38:13 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/22 19:11:39 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_printchar(int c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }

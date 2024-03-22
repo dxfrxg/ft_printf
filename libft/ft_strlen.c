@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 18:06:28 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/21 18:12:42 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/22 19:10:37 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strlen(const char *s)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (s[i])
 		i++;
