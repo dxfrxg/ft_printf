@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/22 19:11:08 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/03/27 14:37:51 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,10 @@ int	ft_printf(char const *str, ...)
 	return (bytes);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	ft_printf("NULL %s NULL", NULL);
+	char *str;
+	ft_printf("Copia:\nPuntero: %p\nUnsigned: %u\nHex: %x\n", str, -1, 100);
 	printf("\n");
-	printf("NULL NULL");
-}*/
+	printf("Original:\nPuntero: %p\nUnsigned: %u\nHex: %x", str, -1, 100);
+}
