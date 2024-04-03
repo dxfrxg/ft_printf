@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/03/27 14:37:51 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/04/04 01:12:08 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,10 @@ int	ft_printf(char const *str, ...)
 
 int	main(void)
 {
-	char *str;
-	ft_printf("Copia:\nPuntero: %p\nUnsigned: %u\nHex: %x\n", str, -1, 100);
-	printf("\n");
-	printf("Original:\nPuntero: %p\nUnsigned: %u\nHex: %x", str, -1, 100);
+	char	*str;
+
+	str = "hola";
+	ft_printf("Copia:\nPtr: %p", str);
+	printf("\n\n");
+	printf("Original:\nPtr: %p", str);
 }
