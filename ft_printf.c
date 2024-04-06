@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/04/06 05:55:52 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/04/06 06:00:43 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,3 @@ int	ft_printf(char const *str, ...)
 	va_end(args);
 	return (bytes);
 }
-
-/*int	main(void)
-{
-	char	*str;
-
-	str = "hola";
-	ft_printf("Copia:\nHex: %x", __LONG_MAX__);
-	printf("\n\n");
-	printf("Original:\nHex: %x", __LONG_MAX__);
-}*/
