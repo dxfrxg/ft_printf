@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 03:57:03 by daxferab          #+#    #+#             */
-/*   Updated: 2024/04/06 06:00:43 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/05/24 13:51:30 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ static int	which_flag(char flag, va_list args)
 		return (ft_printnbr(va_arg(args, int)));
 	else if (flag == 'u')
 		return (ft_printuns(va_arg(args, unsigned int)));
-	else if (flag == 'x' || flag == 'X')
-		return (ft_printhex(va_arg(args, size_t), flag));
+	else if (flag == 'x')
+		return (ft_printhex(va_arg(args, size_t), "0123456789abcdef"));
+	else if (flag == 'X')
+		return (ft_printhex(va_arg(args, size_t), "0123456789ABCDEF"));
 	else if (flag == '%')
 		return (write(1, "%", 1));
 	return (0);
