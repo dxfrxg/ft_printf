@@ -6,7 +6,7 @@
 /*   By: daxferab <daxferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:53:48 by daxferab          #+#    #+#             */
-/*   Updated: 2024/05/24 13:47:31 by daxferab         ###   ########.fr       */
+/*   Updated: 2024/05/24 17:39:36 by daxferab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ int	ft_printhex(size_t num, char *hex_list)
 	bytes = 0;
 	if (num >= 16)
 		bytes += ft_printhex(num / 16, hex_list);
-	bytes += write(1, &hex_list[num % 16], 1);
+	bytes += ft_printchar(hex_list[num % 16]);
 	return (bytes);
 }
